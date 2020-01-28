@@ -1,0 +1,12 @@
+mutation AddUserAppsInfo($user_app:AppData,$app_trigger:Boolean)
+    {
+     appSync(userApps:$user_app,IsAppTrigger:$app_trigger)
+        {
+               success
+               packageName
+
+        }
+
+    }
+
+

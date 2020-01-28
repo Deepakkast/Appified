@@ -1,0 +1,31 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/userapp"
+        android:enabled="true"
+        app:showAsAction="always"
+        android:icon="@drawable/app"
+         android:title="@string/my_app" />
+
+    <item
+        android:id="@+id/friendapp"
+        android:enabled="true"
+        app:showAsAction="always"
+        android:icon="@drawable/friends"
+        android:title="@string/friend_app" />
+    <item
+        android:id="@+id/pagf"
+        android:enabled="true"
+        app:showAsAction="always"
+        android:icon="@drawable/free_delivery"
+        android:title="@string/PAGF" />
+    <item
+        android:id="@+id/tab_usage"
+        android:enabled="true"
+        app:showAsAction="always"
+        android:icon="@drawable/pie_chart"
+        android:title="@string/usage_tab" />
+
+
+</menu>

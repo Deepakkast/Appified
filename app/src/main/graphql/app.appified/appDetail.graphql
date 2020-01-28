@@ -1,0 +1,20 @@
+query appDetail($packageName:String){
+  appDetail(packageName:$packageName){
+                         title,
+                         icon,
+                         developer,
+                         description,
+                         version,
+                         installs,
+                         ratings,
+                         size,
+                         scoreText
+
+                         users{
+                         installedAt,
+                         userName,
+                         profile
+                         }
+
+                        }
+}

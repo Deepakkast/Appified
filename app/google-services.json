@@ -1,0 +1,37 @@
+{
+  "project_info": {
+    "project_number": "57620385217",
+    "firebase_url": "https://appified-209808.firebaseio.com",
+    "project_id": "appified-209808",
+    "storage_bucket": "appified-209808.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:57620385217:android:f566527fc3aac3d6",
+        "android_client_info": {
+          "package_name": "app.appified"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_LjbPGl0KIFMpKcWZQe1Gr_-YOFYy0H0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:background="@color/whitecolor"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <ImageView
+        android:id="@+id/iv_logo_pgf_tab1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="4dp"
+        android:padding="4dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/fblogo" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/linear_apptext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:padding="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/iv_logo_pgf_tab1"
+        app:layout_constraintStart_toEndOf="@id/iv_logo_pgf_tab1"
+        app:layout_constraintEnd_toStartOf="@id/count_down_timer"
+        app:layout_constraintTop_toBottomOf="@+id/iv_logo_pgf_tab1">
+
+        <TextView
+            android:id="@+id/app_name_pgf_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:ellipsize="end"
+            android:maxEms="18"
+            android:singleLine="true"
+            android:textStyle="bold"
+            tools:text="Anything dfdf dfdf dfdf dfdf dfdf dfdf"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_apps_original_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                tools:text="200"
+                android:textStyle="bold"
+                android:layout_marginRight="16dp"
+                android:paddingRight="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/app_name_pgf_tab"/>
+
+            <TextView
+                android:id="@+id/apps_on_offer_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                tools:text="200"
+                android:textStyle="bold"
+                android:textColor="#149108"
+                app:layout_constraintStart_toEndOf="@id/tv_apps_original_price"
+                app:layout_constraintTop_toBottomOf="@id/app_name_pgf_tab"/>
+
+    </android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/count_down_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="12dp"
+        tools:text="20 h : 38 m"
+        android:textSize="12sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+
+    <ImageView
+        android:id="@+id/iv_playstore_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/playstore"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>
+
+
+

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/whitecolor"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.AppSelectActivity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/whitecolor">
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select your Application's"
+            android:layout_gravity="center"/>
+    </android.support.v7.widget.Toolbar>
+
+
+        <RadioGroup
+            android:id="@+id/radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layoutDirection="rtl"
+            android:buttonTint="@color/black_color"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:background="@color/whitecolor"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            android:layout_marginLeft="30dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/select_all"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:buttonTint="@color/black_color"
+                android:text="Select All Apps" />
+
+            <RadioButton
+                android:id="@+id/letmeselect"
+                android:layout_width="match_parent"
+                android:checked="false"
+
+                android:layout_marginTop="8dp"
+                android:buttonTint="@color/black_color"
+                android:layout_height="wrap_content"
+                android:text="Let me select" />
+
+        </RadioGroup>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recylerview"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/radiogroup"
+        android:layout_height="0dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/syncbtn"
+        android:layout_marginTop="16dp"/>
+
+
+    <Button
+        android:id="@+id/syncbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@color/black_color"
+        android:text="Sync"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/whitecolor" />
+</android.support.constraint.ConstraintLayout>

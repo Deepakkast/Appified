@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#000000</color>
+    <color name="facebookColor">#3B5998</color>
+    <color name="whitecolor">#ffff</color>
+    <color name="profileprimary">#490eFF</color>
+    <color name="profiledark">#20B2AA</color>
+    <color name="black_color">#000000</color>
+    <color name="accent">#005098</color>
+    <color name="address">#2F7092</color>
+    <color name="followers">#005098</color>
+    <color name="heading">#3797cf</color>
+    <color name="solidcircle">#80FFFFFF</color>
+    <color name="circleborder">#30ffffff</color>
+    <color name="gradend">#67efc8</color>
+    <color name="gradstart">#63c9ff</color>
+    <color name="followersbg">#65DCE5</color>
+    <color name="light_background_opacity">#B350d2c2</color>
+    <color name="toolbarColor">#ffffff</color>
+    <color name="disable_foreground_grey">#42221f1f</color>
+    <color name="disable_thumb_grey">#1c000000</color>
+    <color name="enable_thumb_grey">#46bdbf</color>
+
+</resources>

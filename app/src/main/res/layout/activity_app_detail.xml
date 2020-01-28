@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/whitecolor"
+    android:layout_height="match_parent">
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:background="@color/whitecolor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/tvAppName"
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                    tools:text="Appified"
+                android:layout_marginRight="4dp"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+             </android.support.v7.widget.Toolbar>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/vgAppProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/whitecolor"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivAppIcon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:padding="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvAppTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="3"
+            android:visibility="gone"
+            android:padding="5dp"
+            tools:text="JioTV - Big Boss, KBC, LIVE sports and TV Shows"
+            android:textColor="@color/black_color"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@id/ivAppIcon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvCompanyName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:padding="5dp"
+            tools:text="Reliance Industries Ltd."
+            android:textColor="@color/black_color"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAppTitle" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="In App"
+            android:textSize="12sp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="7dp"
+            app:layout_constraintEnd_toStartOf="@id/tvShow"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/tvShow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_marginEnd="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:id="@+id/vLineFirst"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#78000000"
+        android:padding="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/vgAppProfile" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/vgAppInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/vLineFirst">
+
+        <ImageView
+            android:id="@+id/ivSize"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_size_black"
+            app:layout_constraintEnd_toStartOf="@+id/tvInstallCount"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvInstallCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="255"
+            android:textColor="@color/black_color"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/tvVersion"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/ivSize" />
+
+        <RatingBar
+            android:id="@+id/tvVersion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/ratingBarStyleSmall"
+            android:stepSize="0.1"
+            android:isIndicator="true"
+            android:theme="@style/RatingBar"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvInstallCount" />
+
+        <TextView
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            tools:text="4.4"
+            android:visibility="gone"
+            android:textColor="@color/black_color"
+            />
+
+
+        <TextView
+            android:id="@+id/tvSize"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            tools:text="55 MB"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@id/ivSize"
+            app:layout_constraintHorizontal_bias="0.5"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="@id/ivSize"
+            app:layout_constraintTop_toBottomOf="@+id/ivSize" />
+
+        <TextView
+            android:id="@+id/tvDownload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Downloads"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@id/tvInstallCount"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvSize"
+            app:layout_constraintStart_toStartOf="@id/tvInstallCount"
+            app:layout_constraintTop_toBottomOf="@id/tvInstallCount" />
+
+        <TextView
+            android:id="@+id/tvVersionSting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="Rating"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@id/tvVersion"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvDownload"
+            app:layout_constraintStart_toStartOf="@id/tvVersion"
+            app:layout_constraintTop_toBottomOf="@+id/tvVersion" />
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:id="@+id/vLineSecond"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="#78000000"
+        android:padding="5dp"
+        app:layout_constraintTop_toBottomOf="@+id/vgAppInfo" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="14dp"
+        android:id="@+id/recylerview"
+        android:background="@color/whitecolor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/vLineSecond"
+      />
+</android.support.constraint.ConstraintLayout>
+

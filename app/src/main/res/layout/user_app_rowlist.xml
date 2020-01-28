@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_margin="0dp"
+    android:background="@color/whitecolor"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_logo_userapp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="4dp"
+        android:padding="4dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/fblogo" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/linear_apptext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:padding="8dp"
+        android:layout_marginRight="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/iv_logo_userapp"
+        app:layout_constraintStart_toEndOf="@id/iv_logo_userapp"
+        app:layout_constraintEnd_toStartOf="@id/layout_menu_setting"
+        app:layout_constraintTop_toBottomOf="@+id/iv_logo_userapp">
+
+        <TextView
+            android:id="@+id/app_name_userapp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:textStyle="bold"
+            tools:text="Anything AnythingAnythingAnythingAnything"
+            android:ellipsize="end"
+            android:maxEms="30"
+            android:singleLine="true"
+            android:layout_marginRight="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tv_installed_date_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:ellipsize="end"
+            android:text="Installed on: "
+            app:layout_constraintTop_toBottomOf="@id/app_name_userapp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <TextView
+            android:id="@+id/installed_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            tools:text="12jun2019 12ju"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_installed_date_title"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/app_name_userapp"
+
+             />
+    </android.support.constraint.ConstraintLayout>
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/switch_btn_pending_apps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="16dp"
+        android:visibility="gone"
+        android:theme="@style/HideUnhideSwitch"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <LinearLayout
+        android:id="@+id/layout_menu_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    <ImageView
+        android:id="@+id/iv_playstore"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="0dp"
+        android:padding="4dp"
+        android:src="@drawable/playstore"
+        />
+    <ImageView
+        android:id="@+id/iv_setting"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="0dp"
+        android:padding="4dp"
+        android:src="@drawable/settings"
+         />
+    <ImageView
+        android:id="@+id/iv_delete"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="0dp"
+        android:padding="4dp"
+        android:src="@drawable/delete"
+
+         />
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

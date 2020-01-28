@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="app.appified">
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="andro.jf.mypermission" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES"/>
+
+    <application
+        android:name=".Config.App"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/logo_big"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="AA_DB_NAME"
+            android:value="myDB.db" />
+        <meta-data
+            android:name="AA_MODELS"
+            android:value="app.appified.Database.AppModel" />
+        <meta-data
+            android:name="AA_DB_VERSION"
+            android:value="1" />
+
+        <provider
+            android:name=".Database.DatabaseContentProvider"
+            android:authorities="${applicationId}"
+            android:exported="false" />
+
+        <receiver android:name=".Fregment.UserAppFragment$AppUninstallReciver">
+            <intent-filter android:priority="999">
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".Service.AppInstallBroadcastReciver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".Service.ButtonReciver" />
+
+        <service android:name=".Service.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".Activity.SplashActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity.AppScreenActivity" />
+        <activity
+            android:name=".Activity.AppSelectActivity"
+            android:theme="@style/Sync" />
+        <activity
+            android:name=".Activity.UserProfileActivity"
+            android:theme="@style/profile" />
+        <activity android:name=".Activity.AppDetailActivity" />
+        <activity
+            android:name=".Activity.AppHideUnhide"
+            android:theme="@style/Sync" />
+        <activity
+            android:name=".Activity.LoginActivity"
+            android:theme="@style/Sync" />
+
+        <service
+            android:name=".Service.AppSyncService"
+            android:enabled="true"
+            android:exported="true" />
+
+
+        <service
+            android:name=".Service.AppUnInstallNotificationService"
+            android:enabled="true" />
+
+        <receiver android:name=".Service.AppUnInstallBroadcastReceiver">
+            <intent-filter>
+                <action
+                    android:name="com.example.myapplication.START_ALARM"
+                    android:exported="true" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="fill_parent"
+    android:layout_height="70dp"
+    card_view:cardElevation="2dp"
+    card_view:contentPadding="5dp"
+    card_view:cardCornerRadius="16dp"
+    android:layout_marginLeft="12dp"
+    card_view:cardMaxElevation="2dp"
+    android:layout_margin="2dp">-->
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/whitecolor"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/whitecolor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageview"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="5dp" />
+
+        <TextView
+            android:id="@+id/apk_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@id/imageview"
+            android:layout_toRightOf="@id/imageview"
+            android:lines="1"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/hideimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/apk_name"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="197dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="19dp"
+            android:layout_toLeftOf="@+id/dotmenu"
+            android:layout_toRightOf="@+id/imageview"
+            android:src="@drawable/ic_ishide" />
+
+
+        <ImageButton
+            android:id="@+id/dotmenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/whitecolor"
+            android:src="@drawable/three_dots"
+            android:visibility="gone" />
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/togle_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:theme="@style/HideUnhideSwitch"
+            android:visibility="gone" />
+
+
+        <!-- <CheckBox
+             android:id="@+id/cbIsShare"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="10dp"
+             android:layout_marginRight="20dp"
+             android:layout_alignParentRight="true"
+             android:buttonTint="@color/followers"/>
+
+    -->
+    </RelativeLayout>
+    <View
+        android:layout_below="@+id/layout"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="#edf0f7"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:layout_height="0.5dp"/>
+
+</android.support.constraint.ConstraintLayout>

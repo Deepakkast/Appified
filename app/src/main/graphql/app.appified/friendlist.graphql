@@ -1,0 +1,21 @@
+query friendList($userId:ID!)
+{
+  friendList(userId:$userId)
+  {
+    _id
+    userName,
+    profile,
+    fbId
+  }
+}
+
+
+
+
+
+
+
+
+
+
+

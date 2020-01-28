@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="fill_parent"
+    android:layout_height="70dp"
+    card_view:cardElevation="0dp"
+    card_view:contentPadding="5dp"
+    card_view:cardCornerRadius="16dp"
+    android:layout_marginLeft="12dp"
+    android:background="@color/whitecolor"
+    card_view:cardMaxElevation="2dp"
+    android:layout_margin="2dp">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:background="@color/whitecolor"
+        android:layout_height="60dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageview"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:paddingLeft="10dp"
+            android:layout_marginLeft="4dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:paddingRight="8dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/apk_name"
+            android:layout_toRightOf="@id/imageview"
+            android:layout_toEndOf="@id/imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:lines="1"
+            android:textSize="16sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            />
+
+        <!-- <CheckBox
+             android:id="@+id/cbIsShare"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="10dp"
+             android:layout_marginRight="20dp"
+             android:layout_alignParentRight="true"
+             android:buttonTint="@color/followers"/>
+
+    --> </RelativeLayout>
+</android.support.v7.widget.CardView>

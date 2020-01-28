@@ -1,0 +1,17 @@
+
+mutation fcmToken($deviceId:String,$fcmToken:String)
+{
+  fcm(deviceId:$deviceId,fcmToken:$fcmToken)
+  {
+    message
+  }
+
+}
+
+
+
+
+
+
+
+

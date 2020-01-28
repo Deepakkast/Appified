@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:background="@color/whitecolor"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/iv_logo_thirdfrag1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="4dp"
+        android:padding="4dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/fblogo" />
+
+    <LinearLayout
+        android:id="@+id/linear_apptext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:padding="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/iv_logo_thirdfrag1"
+        app:layout_constraintStart_toEndOf="@id/iv_logo_thirdfrag1"
+        app:layout_constraintEnd_toStartOf="@id/date_third_frag"
+        app:layout_constraintTop_toBottomOf="@+id/iv_logo_thirdfrag1">
+
+        <TextView
+            android:id="@+id/app_name_thirdfrag1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:textStyle="bold"
+            tools:text="Anything" />
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:src="@drawable/indian_rupee"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="4dp"/>
+            <TextView
+                android:id="@+id/detail_thirdfrag1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                tools:text="200"
+                android:layout_marginRight="16dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:src="@drawable/indian_rupee"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="4dp"/>
+            <TextView
+                android:id="@+id/detail_thirdfrag2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                tools:text="200" />
+        </android.support.v7.widget.LinearLayoutCompat>
+    </LinearLayout>
+
+  <TextView
+      android:id="@+id/timer"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      tools:text="count down"
+      android:layout_marginRight="4dp"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="parent"/>
+    <ImageView
+        android:id="@+id/playstoredemo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:src="@drawable/playstore"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>
+
+
+

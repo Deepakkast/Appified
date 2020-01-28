@@ -1,0 +1,8 @@
+mutation appUninstall($packageName:String)
+{
+ unInstall(packageName:$packageName)
+ {
+     message
+ }
+
+}

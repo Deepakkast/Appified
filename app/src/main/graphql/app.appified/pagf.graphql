@@ -1,0 +1,23 @@
+query getPagfData($userId:ID!)
+{
+getPagfData(userId:$userId)
+{
+packageName
+appName
+actualPrice
+endOfSale
+discountPrice
+icon
+isFree
+}
+}
+
+
+
+
+
+
+
+
+
+

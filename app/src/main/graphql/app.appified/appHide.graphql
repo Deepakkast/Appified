@@ -1,0 +1,8 @@
+mutation appHide($packageName:String,$isHide:Boolean)
+{
+ hide_Unhide(packageName:$packageName,isHide:$isHide)
+ {
+     message
+ }
+
+}

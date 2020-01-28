@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#ffff">
+
+
+    <ImageView
+        android:id="@+id/slide2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/guildeline"
+        tools:src="@tools:sample/backgrounds/scenic"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"/>
+
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guildeline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8"/>
+
+
+
+
+    <TextView
+        android:id="@+id/screen2title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/screen_1_title"
+        app:layout_constraintTop_toBottomOf="@+id/guildeline"
+        android:gravity="center"
+        android:layout_marginTop="12dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+        android:textColor="@color/black_color"
+        android:textSize="24sp"/>
+
+
+    <TextView
+        android:id="@+id/screen2content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/screen_2"
+        android:layout_below="@+id/screen2title"
+        android:gravity="center"
+        android:layout_marginLeft="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/screen2title"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="4dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        android:textColor="#696969"
+        android:textSize="15sp"/>
+
+
+
+
+</android.support.constraint.ConstraintLayout>

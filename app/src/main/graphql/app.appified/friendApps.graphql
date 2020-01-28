@@ -1,0 +1,17 @@
+query friendApps($userId:ID!)
+ {
+  friendApps(userId:$userId)
+  {
+    userName,
+    profile,
+    commonApp{
+      appName,
+      packageName,
+      icon
+    }
+     unCommonApp{appName,
+        packageName,
+        icon
+        }
+  }
+ }

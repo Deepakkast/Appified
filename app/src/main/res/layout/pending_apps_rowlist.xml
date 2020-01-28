@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--..........Not in Use...........-->
+
+
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+   >
+
+    <ImageView
+        android:id="@+id/iv_pending_apps_logo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        tools:src="@drawable/fblogo"
+        android:paddingLeft="10dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:paddingRight="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_pending_apps_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:gravity="center"
+        tools:text="Anything"
+        android:textSize="16sp"
+        android:ellipsize="end"
+        android:maxEms="18"
+        app:layout_constraintBottom_toTopOf="@+id/iv_pending_apps_logo"
+        app:layout_constraintStart_toEndOf="@id/iv_pending_apps_logo"
+        app:layout_constraintTop_toBottomOf="@+id/iv_pending_apps_logo" />
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/switch_btn_pending_apps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="6dp"
+        android:theme="@style/HideUnhideSwitch"
+        app:layout_constraintBottom_toTopOf="@+id/iv_pending_apps_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_pending_apps_logo" />
+
+    <View
+        app:layout_constraintTop_toBottomOf="@+id/switch_btn_pending_apps"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="#edf0f7"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:layout_height="0.5dp"/>
+
+</android.support.constraint.ConstraintLayout>

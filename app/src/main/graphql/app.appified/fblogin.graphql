@@ -1,0 +1,19 @@
+mutation createNewUser($user_name:String!,$user_email:String!,$fb_id:String,$profile_pic:String,$user_mobile:String,$friend_List:[String],$isLoginManual:Boolean,$deviceId:String!)
+    {
+    createUser(userName:$user_name,
+                email: $user_email,
+                 fbId: $fb_id,
+                 profile:$profile_pic,
+                 mobile: $user_mobile,
+                 friendList:$friend_List,
+                  isLoginManual:$isLoginManual,
+                  deviceId:$deviceId
+                 )
+              {
+                userName
+                email
+                token
+                _id
+                 isPresent
+              }
+    }
